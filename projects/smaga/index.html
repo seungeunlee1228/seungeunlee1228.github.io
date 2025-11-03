@@ -302,7 +302,13 @@
       </div>
       <img src="static/images/motivation.png" class="center">
       <h2 class="subtitle has-text-justified">
-         Conventional 3DGS avatars fail to model the dynamic appearance of subjects wearing loose garments, particularly in scenarios involving secondary motion. (a) Our method overcomes these limitations, enabling high-fidelity rendering of Gaussian avatars exhibiting dynamic motion from monocular video. (b) In contrast, conventional methods define deformation through pre-specified articulation models such as linear blend skinning, which operate independently on each frame without accounting for temporal context—often leading to motion error spikes that indicate poor alignment with driving signals. (c) Furthermore, for initializing 3D Gaussians, they rely on a parametric template model resembling a naked body, which struggles to generate Gaussians for clothing regions deviating from the body surface, especially with loose-fitting garments.
+         Conventional 3DGS avatars fail to model the dynamic appearance of subjects wearing loose garments, particularly in scenarios involving secondary motion. <br>
+
+         (a) Our method overcomes these limitations, enabling high-fidelity rendering of Gaussian avatars exhibiting dynamic motion from monocular video. <br>
+
+         (b) In contrast, conventional methods define deformation through pre-specified articulation models such as linear blend skinning, which operate independently on each frame without accounting for temporal context—often leading to motion error spikes that indicate poor alignment with driving signals. <br>
+
+         (c) Furthermore, for initializing 3D Gaussians, they rely on a parametric template model resembling a naked body, which struggles to generate Gaussians for clothing regions deviating from the body surface, especially with loose-fitting garments. <br>
       </h2>
     </div>
   </div>
@@ -313,11 +319,15 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Overview of our dynamic avatar modeling </h2>
+        <h2 class="title is-3">Method Overview</h2>
       </div>
       <img src="static/images/overview.png" class="center">
       <h2 class="subtitle has-text-justified">
-         To model secondary motions in 3DGS-based avatars, we introduce a two-stage framework: (1) Personalized Gaussian Initialization using a deformable NeRF to estimate initial location of each Gaussians in canonical space, and (2) Secondary Motion-Aware Deformation. Once prepared, it is structured as graph(for visual intuition, it is simplified) processed by a GNN-based autoregressive deformer, and decoded into deformed Gaussians' attributes. Motion descriptors derived from SMPL poses guide temporally coherent deformation. The GS rasterizer then renders the final images.
+         To model secondary motions in 3DGS-based avatars, we introduce a two-stage framework: (i) Personalized Gaussian Initialization (PGI), and (ii) Secondary Motion-Aware Deformation (SMAD). <br>
+
+         (i) PGI reconstructs initial location of each Gaussians in canonical space using a deformable radiance field. <br>
+
+         (ii) Once it prepared, the Gaussian graph is constructed (for visual intuition, quadrically simplified). Then, it passes through a GNN-based autoregressive deformer for animation, and decoded into deformed Gaussians' attributes. Motion descriptors derived from SMPL poses guide temporally coherent deformation. The GS rasterizer then renders the final images.
       </h2>
     </div>
   </div>
@@ -353,7 +363,7 @@
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="content">
-          <p class="title is-4">Novel-view Synthesis</p>
+          <p class="title is-4">Free-view Rendering: Novel-view Synthesis</p>
         </div>
       </div>
       <div class="columns is-multiline is-variable is-4">
@@ -416,9 +426,14 @@
       </div>
       <img src="static/images/overview.png" class="center">
       <h2 class="subtitle has-text-justified">
-         <b>Limitation:</b> While motion-dependent deformation with velocity encoding and auto-regressive deformation as finite-differtial dynamic system increase the robustness of clothed avatar animation, it still has difficulty in generalization on out-of-distribution unseen poses.
+         <p>
+          <b>Limitation:</b> While motion-dependent deformation with velocity encoding and auto-regressive deformation as finite-differtial dynamic system increase the robustness of clothed avatar animation, it still has difficulty in generalization on out-of-distribution unseen poses.
+         </p>
 
+        <p>
           <b>Future work:</b> The promising direction towards generalization is large-scale Gaussian reconstruction and animation. As the feed-foward 3DGS can observe various motions, across the arbitrary subjects, much more than the person-specific optimization method, it can handle the generalization problem on 3D avatar animation.
+        </p>
+
       </h2>
     </div>
   </div>
