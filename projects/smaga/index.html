@@ -263,7 +263,8 @@
         <!-- TODO: Add your video file path here -->
         <source src="static/videos/teaser.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
+      <!-- <h2 class="subtitle has-text-centered"> -->
+      <h2 class="subtitle has-text-justified">
          <b>TL;DR.</b>, Template-free 3D clothed avatar reconstruction and animation given monocular videos. To animate the avatars, velocity encoding and secondary motion-aware Gaussian graph deformation are proposed.
       </h2>
     </div>
@@ -301,7 +302,25 @@
         <h2 class="title is-3">Motivation </h2>
       </div>
       <img src="static/images/motivation.png" class="center">
-      <h2 class="subtitle has-text-justified">
+      <div class="content has-text-justified">
+        <ul>
+          <li>
+            Conventional 3DGS avatars fail to model the dynamic appearance of subjects wearing loose garments, particularly in scenarios involving secondary motion.
+            <ol type="a">
+              <li>
+                Our method overcomes these limitations, enabling high-fidelity rendering of Gaussian avatars exhibiting dynamic motion from monocular video.
+              </li>
+              <li>
+                In contrast, conventional methods define deformation through pre-specified articulation models such as linear blend skinning, which operate independently on each frame without accounting for temporal context—often leading to motion error spikes that indicate poor alignment with driving signals.
+              </li>
+              <li>
+                Furthermore, for initializing 3D Gaussians, they rely on a parametric template model resembling a naked body, which struggles to generate Gaussians for clothing regions deviating from the body surface, especially with loose-fitting garments.
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <!-- <h2 class="subtitle has-text-justified">
          Conventional 3DGS avatars fail to model the dynamic appearance of subjects wearing loose garments, particularly in scenarios involving secondary motion. <br>
 
          (a) Our method overcomes these limitations, enabling high-fidelity rendering of Gaussian avatars exhibiting dynamic motion from monocular video. <br>
@@ -309,7 +328,7 @@
          (b) In contrast, conventional methods define deformation through pre-specified articulation models such as linear blend skinning, which operate independently on each frame without accounting for temporal context—often leading to motion error spikes that indicate poor alignment with driving signals. <br>
 
          (c) Furthermore, for initializing 3D Gaussians, they rely on a parametric template model resembling a naked body, which struggles to generate Gaussians for clothing regions deviating from the body surface, especially with loose-fitting garments. <br>
-      </h2>
+      </h2> -->
     </div>
   </div>
 </section>
