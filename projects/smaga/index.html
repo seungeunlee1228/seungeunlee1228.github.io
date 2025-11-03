@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  Primary Meta Tags
+  <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
   <!-- <meta name="title" content="Secondary Motion-aware 3D Gaussian Avatars for Modeling Dynamic Appearances"> -->
   <!-- TODO: Write a compelling 150-160 character description of your research -->
@@ -253,18 +253,18 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
+      <!-- <h2 class="subtitle has-text-centered">
          <b>TL;DR.</b>, Template-free 3D clothed avatar reconstruction and animation given monocular videos. To animate the avatars, velocity encoding and secondary motion-aware Gaussian graph deformation are proposed.
-      </h2>
+      </h2> -->
       <!-- TODO: Replace with your teaser video -->
       <!-- <img src="static/images/MPMAvatar_Teaser.jpg" class="center"> -->
       <!-- TODO: Replace with your video description -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
         <!-- TODO: Add your video file path here -->
-        <source src="static/videos/teaser_video.mp4" type="video/mp4">
+        <source src="static/videos/teaser.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-         <b>sdasdfasdfasdf</b>, a framework for creating 3D Gaussian avatars from multi-view videos, that support <i>physically accurate and robust animations</i>, especially for loose garments. Ours is also zero-shot generalizable to novel scene interactions.
+         <b>TL;DR.</b>, Template-free 3D clothed avatar reconstruction and animation given monocular videos. To animate the avatars, velocity encoding and secondary motion-aware Gaussian graph deformation are proposed.
       </h2>
     </div>
   </div>
@@ -280,7 +280,11 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Recent advances in neural rendering, particularly 3D Gaussian Splatting (3DGS), have enabled animatable 3D human avatars from single videos with efficient rendering and high fidelity. However, current methods struggle with dynamic appearances, especially in loose garments (e.g., skirts), causing unrealistic cloth motion and needle artifacts. This paper introduces a novel approach to dynamic appearance modeling for 3DGS-based avatars, focusing on loose clothing. We identify two key challenges: (1) limited Gaussian deformation under pre-defined template articulation, and (2) a mismatch between body-template assumptions and the geometry of loose apparel. To address these issues, we propose a motionaware autoregressive structural deformation framework for Gaussians. We structure Gaussians into an approximate graph and recursively predict structure-preserving updates, yielding realistic, template-free cloth dynamics. Our framework enables view-consistent and robust appearance modeling under the single-view constraint, producing accurate foreground silhouettes and precise alignment of Gaussian points with clothed shapes. To demonstrate the effectiveness of our method, we introduce an in-the-wild dataset featuring subjects performing dynamic movements in loose clothing, and extensive experiments validate that our approach significantly outperforms existing 3DGS-based methods in modeling dynamic appearances from single videos.
+          Creating realistic 3D human avatars from monocular videos remains a fundamental challenge in neural rendering, particularly when modeling dynamic appearances such as loose or flowing garments. Existing 3D Gaussian Splatting (3DGS)–based avatar methods accurately capture primary body motion but often fail to reproduce secondary motion—the subtle, time-dependent cloth dynamics that make movements feel natural.
+          </p>
+
+          <p>
+          <b>SMAGA</b>(Secondary Motion-Aware 3D Gaussian Avatars) introduces a novel framework that explicitly models these secondary dynamics. Our method features a velocity-encoded Gaussian graph and an autoregressive deformation network that predict structure-preserving updates to each Gaussian primitive. This design enables the avatar to capture temporally coherent, realistic garment behavior without relying on pre-defined skeletal templates.
           </p>
         </div>
       </div>
