@@ -293,6 +293,20 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Motivation -->
+ <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Motivation </h2>
+      </div>
+      <img src="static/images/motivation.png" class="center">
+      <h2 class="subtitle has-text-justified">
+         Conventional 3DGS avatars fail to model the dynamic appearance of subjects wearing loose garments, particularly in scenarios involving secondary motion. (a) Our method overcomes these limitations, enabling high-fidelity rendering of Gaussian avatars exhibiting dynamic motion from monocular video. (b) In contrast, conventional methods define deformation through pre-specified articulation models such as linear blend skinning, which operate independently on each frame without accounting for temporal context—often leading to motion error spikes that indicate poor alignment with driving signals. (c) Furthermore, for initializing 3D Gaussians, they rely on a parametric template model resembling a naked body, which struggles to generate Gaussians for clothing regions deviating from the body surface, especially with loose-fitting garments.
+      </h2>
+    </div>
+  </div>
+</section>
 
 <!-- Overview -->
  <section class="hero teaser">
@@ -301,9 +315,9 @@
       <div class="container">
         <h2 class="title is-3">Overview of our dynamic avatar modeling </h2>
       </div>
-      <img src="static/images/MPMAvatar_Method.png" class="center">
+      <img src="static/images/overview.png" class="center">
       <h2 class="subtitle has-text-justified">
-         We hybridly represent our canonical avatar with (1) a mesh with physical parameters for geometry and dynamics modeling, and (2) 3D Gaussian Splats for appearance modeling. This avatar can be animated via linear blend skinning for non-garment regions and physical simulation for garment regions with our novel collision handling algorithm. <br><i>Visualization key</i>. Blue arrows indicate body grid velocities, green arrows denote garment grid velocities, and red arrows show colliding grid regions where velocity projection is applied.
+         To model secondary motions in 3DGS-based avatars, we introduce a two-stage framework: (1) Personalized Gaussian Initialization using a deformable NeRF to estimate initial location of each Gaussians in canonical space, and (2) Secondary Motion-Aware Deformation. Once prepared, it is structured as graph(for visual intuition, it is simplified) processed by a GNN-based autoregressive deformer, and decoded into deformed Gaussians' attributes. Motion descriptors derived from SMPL poses guide temporally coherent deformation. The GS rasterizer then renders the final images.
       </h2>
     </div>
   </div>
@@ -314,10 +328,10 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Novel Pose Driving Results</h2>
+      <h2 class="title is-3">Results</h2>
       <div class="columns is-centered has-text-centered">
         <div class="content">
-          <p class="title is-4">Input Videos</p>
+          <p class="title is-4">Animation: Novel Pose Synthesis</p>
         </div>
       </div>
       <div class="columns is-multiline is-variable is-4">
@@ -339,7 +353,7 @@
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="content">
-          <p class="title is-4">Novel Pose Animations</p>
+          <p class="title is-4">Novel-view Synthesis</p>
         </div>
       </div>
       <div class="columns is-multiline is-variable is-4">
@@ -365,7 +379,7 @@
 <!-- End video results -->
 
 <!-- Video Results -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Zero-Shot Scene Interactions Results</h2>
@@ -390,28 +404,46 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video results -->
+
+<!-- Futher Discussion or Conclusion (Limitation / Future Work) -->
+ <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Further Discussion </h2>
+      </div>
+      <img src="static/images/overview.png" class="center">
+      <h2 class="subtitle has-text-justified">
+         <b>Limitation:</b> While motion-dependent deformation with velocity encoding and auto-regressive deformation as finite-differtial dynamic system increase the robustness of clothed avatar animation, it still has difficulty in generalization on out-of-distribution unseen poses.
+
+          <b>Future work:</b> The promising direction towards generalization is large-scale Gaussian reconstruction and animation. As the feed-foward 3DGS can observe various motions, across the arbitrary subjects, much more than the person-specific optimization method, it can handle the generalization problem on 3D avatar animation.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- Conclusion -->
 
 
 <!-- Youtube video -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Supplementary Video</h2>
+      <!-- <h2 class="title is-3">Supplementary Video</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
 
-          <div class="publication-video">
+          <div class="publication-video"> -->
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/ytrKDNqACqM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/ytrKDNqACqM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 <!-- Poster Image -->
