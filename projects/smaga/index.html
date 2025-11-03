@@ -265,7 +265,7 @@
       </video>
       <!-- <h2 class="subtitle has-text-centered"> -->
       <h2 class="subtitle has-text-justified">
-         <b>TL;DR.</b>, Template-free 3D clothed avatar reconstruction and animation given monocular videos. To animate the avatars, velocity encoding and secondary motion-aware Gaussian graph deformation are proposed.
+         <b>TL;DR.</b> Template-free 3D clothed avatar reconstruction and animation given monocular videos. To animate the avatars, velocity encoding and secondary motion-aware Gaussian graph deformation are proposed.
       </h2>
     </div>
   </div>
@@ -345,13 +345,27 @@
         <h2 class="title is-3">Method Overview</h2>
       </div>
       <img src="static/images/overview.png" class="center">
-      <h2 class="subtitle has-text-justified">
-         To model secondary motions in 3DGS-based avatars, we introduce a two-stage framework: (i) Personalized Gaussian Initialization (PGI), and (ii) Secondary Motion-Aware Deformation (SMAD). <br>
+      <!-- <h2 class="subtitle has-text-justified"> -->
+      <div class="content has-text-justified">
+        <p>
+          To model secondary motions in 3DGS-based avatars, we introduce a two-stage framework: (i) Personalized Gaussian Initialization (PGI), and (ii) Secondary Motion-Aware Deformation (SMAD).
+        </p>
 
-         (i) PGI reconstructs initial location of each Gaussians in canonical space using a deformable radiance field. <br>
 
-         (ii) Once it prepared, the Gaussian graph is constructed (for visual intuition, quadrically simplified). Then, it passes through a GNN-based autoregressive deformer for animation, and decoded into deformed Gaussians' attributes. Motion descriptors derived from SMPL poses guide temporally coherent deformation. The GS rasterizer then renders the final images.
-      </h2>
+        <ol type="i">
+          <li>
+            PGI reconstructs initial location of each Gaussian in canonical space using a deformable radiance field.
+          </li>
+          <li>
+            Once it is prepared, the Gaussian graph is constructed (for visual intuition, quadrically simplified).
+            Then, it passes through a GNN-based autoregressive deformer for animation, and decoded into deformed Gaussians' attributes.
+            Motion descriptors derived from SMPL poses guide temporally coherent deformation.
+            The GS rasterizer then renders the final images.
+          </li>
+        </ol>
+      </div>
+
+      <!-- </h2> -->
     </div>
   </div>
 </section>
@@ -445,10 +459,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Further Discussion </h2>
+      <!-- <h2 class="title is-3">Further Discussion </h2> -->
       </div>
       <img src="static/images/overview.png" class="center">
       <h2 class="subtitle has-text-justified">
+      <div class="content has-text-centered">
          <p>
           <b>Limitation:</b> While motion-dependent deformation with velocity encoding and auto-regressive deformation as finite-differtial dynamic system increase the robustness of clothed avatar animation, it still has difficulty in generalization on out-of-distribution unseen poses.
          </p>
@@ -456,8 +471,8 @@
         <p>
           <b>Future work:</b> The promising direction towards generalization is large-scale Gaussian reconstruction and animation. As the feed-foward 3DGS can observe various motions, across the arbitrary subjects, much more than the person-specific optimization method, it can handle the generalization problem on 3D avatar animation.
         </p>
-
-      </h2>
+      </div>
+      <!-- </h2> -->
     </div>
   </div>
 </section>
@@ -521,7 +536,6 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
