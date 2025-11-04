@@ -87,7 +87,10 @@
                   </div>
 
                   <div class="column has-text-centered">
-                    <div class="publication-links">
+                    <p>
+                        Role: Problem Definition, Existing Challenge Analysis, Idea Conceptualization, Model Design & Implementation, Data Collection/Pre-Processing, Training, Test and Evaluation
+                    </p>
+                    <!-- <div class="publication-links"> -->
                          <!-- TODO: Update with your arXiv paper ID -->
                       <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/2510.01619.pdf" target="_blank"
@@ -170,7 +173,7 @@
       <div class="container">
         <h2 class="title is-3">Motivation </h2>
       </div>
-      <img src="static/images/motivation.png" class="center">
+      <!-- <img src="static/images/motivation.png" class="center"> -->
       <div class="content has-text-justified">
         <!-- <ul>
           <li> -->
@@ -198,7 +201,7 @@
       <div class="container">
         <h2 class="title is-3">Method Overview</h2>
       </div>
-      <img src="static/images/overview.png" class="center">
+      <!-- <img src="static/images/overview.png" class="center"> -->
       <!-- <h2 class="subtitle has-text-justified"> -->
       <div class="content has-text-justified">
         <p>
@@ -227,7 +230,7 @@
       <div class="container">
         <h2 class="title is-3">Data Collection and Processing</h2>
       </div>
-      <img src="static/images/overview.png" class="center">
+      <!-- <img src="static/images/overview.png" class="center"> -->
       <!-- <h2 class="subtitle has-text-justified"> -->
       <div class="content has-text-justified">
         <p>
@@ -242,34 +245,34 @@
       <h2 class="title is-3">Human Motion Capture: Samples</h2>
       <div class="columns is-multiline is-variable is-4 has-text-centered">
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/ex1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/ex2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/ex3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
       <div class="columns is-multiline is-variable is-4 has-text-centered">
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/ex4.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/ex5.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/ex6.mp4" type="video/mp4">
           </video>
         </div>
@@ -292,17 +295,17 @@
       </div> -->
       <div class="columns is-multiline is-variable is-4 has-text-centered">
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/res1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/res2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="column is-12-mobile is-4-tablet is-4-desktop">
-          <video controls muted loop playsinline preload="metadata" style="width:80%">
+          <video controls muted loop playsinline preload="metadata" style="width:100%; height:100%;">
             <source src="static/videos/res3.mp4" type="video/mp4">
           </video>
         </div>
@@ -340,12 +343,35 @@
       <!-- <h2 class="subtitle has-text-justified"> -->
       <div class="content has-text-justified">
          <p>
-          <b>Limitation:</b> (i) Although our model enables real-time, feed-forward inference for arbitrary subjects without subject-specific training, its visual quality remains limited, particularly in terms of output resolution and fine-grained rendering details. (ii) To generate talking animations, our system currently relies on an external audio-to-motion (SMPL-X) generation model. However, this approach does not fully capture or adapt to each avatar’s unique style and expressiveness, leading to constraints in achieving truly personalized and natural motion synthesis.
-         </p>
-
-        <p>
-          <b>Future work:</b> (i) A straightforward extension would be to increase the number of Gaussian primitives in the representation, which could enhance visual fidelity. However, doing so requires substantially more training data to maintain generalization performance. Thus, scaling up the dataset and retraining the model on a much larger corpus represents a simple yet effective next step. (ii) A more promising direction is to design an end-to-end pipeline that integrates audio-to-motion and motion-to-3D avatar animation within a single framework. This would minimize intermediate information loss between stages, enhance stylistic consistency and expressiveness, and still preserve the advantages of real-time parametric motion animation.
+          <b>Limitation.</b>
         </p>
+        <p>
+          <!-- (i) Although our model enables real-time, feed-forward inference for arbitrary subjects without subject-specific training, its visual quality remains limited, particularly in terms of output resolution and fine-grained rendering details. (ii) To generate talking animations, our system currently relies on an external audio-to-motion (SMPL-X) generation model. However, this approach does not fully capture or adapt to each avatar’s unique style and expressiveness, leading to constraints in achieving truly personalized and natural motion synthesis. -->
+          <ol type="i">
+            <li>
+              Although our model enables real-time, feed-forward inference for arbitrary subjects without subject-specific training, its visual quality remains limited, particularly in terms of output resolution and fine-grained rendering details.
+            </li>
+            <li>
+              To generate talking animations, our system currently relies on an external audio-to-motion (SMPL-X) generation model. However, this approach does not fully capture or adapt to each avatar’s unique style and expressiveness, leading to constraints in achieving truly personalized and natural motion synthesis.
+            </li>
+          </ol>
+         </p>
+        <p>
+          <b>Future work:</b>
+          <!-- (i) A straightforward extension would be to increase the number of Gaussian primitives in the representation, which could enhance visual fidelity. However, doing so requires substantially more training data to maintain generalization performance. Thus, scaling up the dataset and retraining the model on a much larger corpus represents a simple yet effective next step. (ii) A more promising direction is to design an end-to-end pipeline that integrates audio-to-motion and motion-to-3D avatar animation within a single framework. This would minimize intermediate information loss between stages, enhance stylistic consistency and expressiveness, and still preserve the advantages of real-time parametric motion animation. -->
+        </p>
+        <p>
+          <b>Future Work.</b>
+          <!-- (i) Although our model enables real-time, feed-forward inference for arbitrary subjects without subject-specific training, its visual quality remains limited, particularly in terms of output resolution and fine-grained rendering details. (ii) To generate talking animations, our system currently relies on an external audio-to-motion (SMPL-X) generation model. However, this approach does not fully capture or adapt to each avatar’s unique style and expressiveness, leading to constraints in achieving truly personalized and natural motion synthesis. -->
+          <ol type="i">
+            <li>
+              A straightforward extension would be to increase the number of Gaussian primitives in the representation, which could enhance visual fidelity. However, doing so requires substantially more training data to maintain generalization performance. Thus, scaling up the dataset and retraining the model on a much larger corpus represents a simple yet effective next step.
+            </li>
+            <li>
+              A more promising direction is to design an end-to-end pipeline that integrates audio-to-motion and motion-to-3D avatar animation within a single framework. This would minimize intermediate information loss between stages, enhance stylistic consistency and expressiveness, and still preserve the advantages of real-time parametric motion animation.
+            </li>
+          </ol>
+         </p>
       </div>
       <!-- </h2> -->
     </div>
