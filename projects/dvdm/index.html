@@ -75,7 +75,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>Distilling Video Diffusion Model to Animate Expressive 3D Humans from a Photo</title>
+  <title>Personalized Audio-driven Whole-body Talking Avatars</title>
 
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/talk.ico">
@@ -202,7 +202,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Distilling Video Diffusion Model to Animate Expressive 3D Humans from a Photo</h1>
+            <h1 class="title is-1 publication-title">Personalized Audio-driven Whole-body Talking Avatars</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -341,32 +341,32 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Method Overview</h2>
+        <h2 class="title is-3">Method</h2>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="content">
-          <p class="title is-4">Model Architecture</p>
+          <p class="title is-4">Overview</p>
         </div>
       </div>
       <img src="static/images/overview.png" class="center">
       <!-- <h2 class="subtitle has-text-justified"> -->
       <div class="content has-text-justified">
         <p>
-          Our method builds a personalized 3D Gaussian avatar from a single image using a Hand-Body–Head Transformer that integrates face, body, and hand features. An audio-driven particle deformer then directly maps speech features to Gaussian deformations, generating synchronized full-body motion. By distilling motion priors from a video diffusion model, our system achieves realistic, expressive, and temporally consistent talking avatars.
+          Overview of our personalized Audio-driven whole-body talking Avatars (AudioAvatar): End-to-end framework that distills large video diffusion models to generate expressive, synchronized talking avatars from a single image.
         </p>
       <!-- </h2> -->
       </div>
       <!-- aa -->
       <div class="columns is-centered has-text-centered">
         <div class="content">
-          <p class="title is-4">Data Creation</p>
+          <p class="title is-4">Synthetic Data Creation for Video Distillation</p>
         </div>
       </div>
       <img src="static/images/data-pipeline.png" class="center">
       <!-- <h2 class="subtitle has-text-justified"> -->
       <div class="content has-text-justified">
         <p>
-          We build a single-human audio–video paired dataset using an audio-driven video diffusion model. Prompts are generated from a predefined dictionary of human attributes to ensure diverse identities, and these are used with FLUX, Gemini, and ChatGPT text-to-image models to create corresponding reference images. In parallel, conversational scripts are converted to speech via ElevenLabs, and paired with each image. Finally, the Wan2.2 Video Generation Model synthesizes synchronized talking videos, forming a diverse and high-quality dataset for training expressive 3D avatars.
+          We build a single-human audio–video paired dataset using an audio-driven video diffusion model. Prompts are generated from a predefined dictionary of human attributes to ensure diverse identities, and these are used with FLUX, Gemini, and ChatGPT text-to-image models to create corresponding reference images. In parallel, conversational scripts are converted to speech via ElevenLabs, and paired with each image. Finally, the Video Generation Models synthesize synchronized talking videos, forming a diverse and high-quality dataset for training expressive 3D avatars.
         </p>
       <!-- </h2> -->
       </div>
@@ -517,7 +517,7 @@
       <!-- <h2 class="subtitle has-text-justified"> -->
       <div class="content has-text-justified">
          <p>
-          <b>Limitation:</b> Our system requires high computational cost for 3D avatar personalization — over 40 hours of video data per identity and 1.5–2 hours to generate a 10-second clip with Wan2.2 on an A100 GPU, totaling around ₩30 million on cloud.
+          <b>Limitation:</b> Our system requires high computational and monetary cost for 3D avatar personalization — over 40 hours of video data per identity and 1.5–2 hours to generate a 10-second clip on a single A100 GPU.
          </p>
 
         <p>
