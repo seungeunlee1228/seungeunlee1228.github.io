@@ -1,5 +1,6 @@
 #!/bin/bash
-git add .
+# git add .
+git add --all
 git commit -m "auto commit"
 git fetch origin
 git rebase origin/main
